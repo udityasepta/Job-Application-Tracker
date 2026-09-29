@@ -1,0 +1,664 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background: #111827;
+    color: white;
+
+    padding: 25px 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #9ca3af;
+
+    padding: 12px 15px;
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #374151;
+    color: white;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main {
+    margin-left: 230px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+
+
+/* =========================
+   HEADER ACTIONS
+========================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 5px;
+    padding-bottom: 12px;
+    gap: 10px;
+}
+
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-btn {
+    border: 1px solid #d1d5db;
+
+    background: white;
+    color: #374151;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.theme-btn:hover {
+    background: #f3f4f6;
+}
+
+
+
+
+
+
+@media (max-width: 650px) {
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .header-actions .theme-btn,
+    .header-actions .primary-btn {
+        flex: 1;
+    }
+
+}
+
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+.secondary-btn {
+    border: none;
+    background: #e5e7eb;
+    color: #374151;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background: #d1d5db;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    color: #6b7280;
+
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #111827;
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.controls {
+    display: flex;
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.controls input,
+.controls select {
+    background: white;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.controls input {
+    flex: 1;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   APPLICATIONS
+========================= */
+
+.applications {
+    background: white;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    padding: 25px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+}
+
+
+/* =========================
+   APPLICATION CARD
+========================= */
+
+.application-card {
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+.application-card:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.application-info h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.application-info p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.application-meta {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-applied {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-interview {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-selected {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* =========================
+   APPLICATION ACTIONS
+========================= */
+
+.application-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.edit-btn {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.edit-btn:hover {
+    background: #c7d2fe;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #6b7280;
+}
+
+.empty-state h3 {
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 600px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 25px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    font-size: 22px;
+}
+
+.close-btn {
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    color: #6b7280;
+
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #111827;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =========================
+   FORM ACTIONS
+========================= */
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main {
+        margin-left: 190px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+    }
+
+    .main {
+        margin-left: 0;
+
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card p {
+        font-size: 24px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .application-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .application-actions {
+        width: 100%;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        flex: 1;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .applications {
+        padding: 15px;
+    }
+}
+

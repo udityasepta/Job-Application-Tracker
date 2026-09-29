@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Application Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            JobTracker
+        </div>
+
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Applications</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Header -->
+       
+<header class="header">
+
+    <div>
+        <h1>Job Application Tracker</h1>
+        <p>Track and manage your job applications.</p>
+    </div>
+
+    <div class="header-actions">
+
+        
+
+        <button id="addJobBtn" class="primary-btn">
+            + Add Application
+        </button>
+
+    </div>
+
+</header>
+
+
+
+                  
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total Applications</h3>
+                <p id="totalApplications">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Applied</h3>
+                <p id="appliedCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Interviews</h3>
+                <p id="interviewCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Selected</h3>
+                <p id="selectedCount">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Controls -->
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search company or job role..."
+            >
+
+            <select id="statusFilter">
+
+                <option value="All">All Status</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+
+            </select>
+
+            <select id="sortBy">
+
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+
+            </select>
+
+        </section>
+
+
+        <!-- Applications -->
+        <section class="applications">
+
+            <div class="section-header">
+                <h2>My Applications</h2>
+            </div>
+
+            <div id="applicationsContainer">
+
+                <!-- JavaScript will add applications here -->
+
+                <div class="empty-state">
+                    <h3>No applications yet</h3>
+                    <p>Click "Add Application" to create your first application.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Add/Edit Modal -->
+    <div id="jobModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 id="modalTitle">Add Application</h2>
+
+                <button id="closeModal" class="close-btn">
+                    &times;
+                </button>
+
+            </div>
+
+
+            <form id="jobForm">
+
+                <input type="hidden" id="editId">
+
+
+                <div class="form-group">
+
+                    <label for="company">
+                        Company Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="e.g. Infosys"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="role">
+                        Job Role
+                    </label>
+
+                    <input
+                        type="text"
+                        id="role"
+                        placeholder="e.g. Frontend Developer"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="e.g. Indore"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="salary">
+                            Salary
+                        </label>
+
+                        <input
+                            type="text"
+                            id="salary"
+                            placeholder="e.g. 4 LPA"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="date">
+                            Application Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="status">
+                            Status
+                        </label>
+
+                        <select id="status" required>
+
+                            <option value="Applied">
+                                Applied
+                            </option>
+
+                            <option value="Interview">
+                                Interview
+                            </option>
+
+                            <option value="Selected">
+                                Selected
+                            </option>
+
+                            <option value="Rejected">
+                                Rejected
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="jobUrl">
+                        Job URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="jobUrl"
+                        placeholder="https://example.com/job"
+                    >
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        id="cancelBtn"
+                        class="secondary-btn"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Save Application
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
